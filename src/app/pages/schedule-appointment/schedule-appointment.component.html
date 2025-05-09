@@ -1,0 +1,73 @@
+<div class="mx-auto max-w-7xl px-3 py-6">
+  <div class="title flex items-center space-x-2">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      class="size-5 stroke-2 stroke-text"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M11.03 3.97a.75.75 0 0 1 0 1.06l-6.22 6.22H21a.75.75 0 0 1 0 1.5H4.81l6.22 6.22a.75.75 0 1 1-1.06 1.06l-7.5-7.5a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 0 1 1.06 0Z"
+        clip-rule="evenodd"
+      />
+    </svg>
+
+    <p class="font-bold text-2xl text-text">Agendar Citas</p>
+  </div>
+
+  <!-- form -->
+  <div class="mt-6">
+    <!-- columnas -->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="p-2">
+        <div class="mb-6">
+          <p class="font-semibold text-text mb-3">Tipo de Cita</p>
+          <!--columna izquierda -->
+          <div class="">
+            <select
+              name="appointment"
+              id="appointment"
+              class="w-full px-2 rounded-md border-1 border-gray-200"
+            >
+              <option value="Psicología">Psicología</option>
+              <option value="Nutrición">Nutrición</option>
+              <option value="Fisioterapia">Fisioterapia</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <p class="font-semibold text-text mb-3">Descripción</p>
+          <input
+            type="text"
+            name="description"
+            id=""
+            class="w-full h-30 rounded-md border-1 border-gray-200"
+          />
+        </div>
+
+        <p class="font-semibold text-text mb-3">Seleccione una hora</p>
+        <div class="space-x-6 text-primary font-medium">
+          <app-time-button [text]="'7:00am'"></app-time-button>
+          <app-time-button [text]="'7:50am'"></app-time-button>
+          <app-time-button [text]="'8:40am'"></app-time-button>
+          <app-time-button [text]="'9:30am'"></app-time-button>
+          <app-time-button [text]="'10:20am'"></app-time-button>
+        </div>
+      </div>
+      <!-- columna derecha -->
+      <div class="p-2">
+        <p class="font-semibold text-text">Seleccione una fecha</p>
+
+        <div class="calendar"></div>
+      </div>
+    </div>
+    <!-- boton -->
+    <button
+      class="fixed bottom-30 right-30 bg-accent rounded-4xl px-10 py-2 text-white font-semibold"
+    >
+      Agendar Cita
+    </button>
+  </div>
+</div>
