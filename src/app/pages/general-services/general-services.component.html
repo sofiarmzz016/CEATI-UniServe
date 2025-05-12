@@ -1,0 +1,75 @@
+<header
+  class="flex justify-between items-center mx-auto h-100 px-12 bg-linear-to-b from-[#e4f6d8] to-[#FCFAFA]"
+>
+  <div class="w-full h-full">
+    <div class="flex pt-14 space-x-40 h-100">
+      <div class="w-1/2">
+        <h2 class="text-text font-bold text-4xl mb-6">
+          Conoce nuestros servicios y áreas
+          <i class="text-primary">administrativas</i>
+        </h2>
+        <p class="text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, sequi
+          nam aspernatur quaerat quia, sit, modi quo amet pariatur ut aut vero.
+          Eos repudiandae tenetur harum quam. Dolorum, quidem. Deserunt.
+        </p>
+      </div>
+      <div class="w-1/2">
+        <img
+          src="/assets/admin02.png"
+          alt=""
+          class="h-full w-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- contenido main -->
+<div class="mx-auto max-w-7xl px-3 py-6 flex flex-col">
+  <div class="flex space-x-10 mt-6">
+    <app-link-card
+      [title]="'Prácticas profesionales'"
+      [text]="
+        'Actividad formativa que consolida las competencias adquiridas en el aula y que se desarrolla en el sector público, social y privado.'
+      "
+      [imgURL]="'/assets/practicas.jpg'"
+      pageURL="../practicas-profesionales"
+    ></app-link-card>
+    <app-link-card
+      [title]="'Servicio social'"
+      [text]="
+        'Formación integral de los futuros profesionistas mediante actividades para retribuir a la sociedad, aplicando sus conocimientos para la solución de problemas en pro de la comunidad.'
+      "
+      [imgURL]="'/assets/sc.jpg'"
+    ></app-link-card>
+    <app-link-card
+      [title]="'Movilidad Académica'"
+      [text]="
+        'Oportunidad de continuar los estudios en el extranjero, mediante una estancia de un semestre a un año en colaboración conjunta entre la UANL y organismos e instituciones internacionales.'
+      "
+      [imgURL]="'/assets/intercambio.jpg'"
+    >
+    </app-link-card>
+  </div>
+
+  <div class="">
+    <h2 class="text-text font-bold text-2xl mb-8">
+      Nuestros Servicios y Áreas Administrativas
+    </h2>
+    <div class="grid grid-cols-2 space-x-8 space-y-6">
+      <app-simple-card
+        [title]="'Servicios Escolares'"
+        [text]="
+          `La Coordinación de Servicios Escolares está encargada de coordinar y llevar una logística en los trámites de Escolar a través del SIASE
+          y el manejo de información y expedición de documentos dedicados a apoyar a estudiantes y maestros.`
+        "
+      ></app-simple-card>
+      <app-simple-card [title]="'Servicio de Cajas'"></app-simple-card>
+      <app-simple-card [title]="'Material Didáctico'"></app-simple-card>
+      <app-simple-card [title]="'Servicio de Cajas'"></app-simple-card>
+      <app-simple-card [title]="'Educación Continua'"></app-simple-card>
+      <app-simple-card [title]="'Extra'"></app-simple-card>
+    </div>
+  </div>
+</div>
