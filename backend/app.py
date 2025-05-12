@@ -1,28 +1,29 @@
-# from flask import Flask, render_template
-# app = Flask(__name__)
-# @app.route('/')
-# def index():
-#     return render_template('app.component.html')
-# if __name__ == '__main__':
-#     app.run()
-
-
-
-import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_cors import CORS
+from flask_jwt_extended import JWTManager
 
 app = Flask(__name__)
 
-# Configuración de la base de datos
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or \
-    'postgresql://postgres:contrasena@localhost/uniserve'
+# Configuración
+app.config.from_object('config.Config')
 
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
+# Extensiones
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+CORS(app)
+jwt = JWTManager(app)
 
-# Importar modelos después de inicializar db
+# Importar modelos
 from models import User, Appointment
+
+# Registrar blueprints
+from routes.users import users_bp
+from routes.appointments import appointments_bp
+
+app.register_blueprint(users_bp, url_prefix='/api/users')
+app.register_blueprint(appointments_bp, url_prefix='/api/appointments')
+
+if __name__ == '__main__':
+    app.run(debug=True)
