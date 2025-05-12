@@ -17,8 +17,8 @@ app = Flask(__name__)
 
 # Configuración de la base de datos
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or \
-    'postgresql://health_user:StrongPassword123!@localhost/health_appointments'
-    
+    'postgresql://postgres:contrasena@localhost/uniserve'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
