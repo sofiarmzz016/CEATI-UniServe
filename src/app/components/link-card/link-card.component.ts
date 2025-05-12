@@ -9,4 +9,5 @@ export class LinkCardComponent {
   text = input('');
   title = input('');
   imgURL = input('');
+  pageURL = input('');
 }
