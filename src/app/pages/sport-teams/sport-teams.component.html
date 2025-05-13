@@ -6,12 +6,14 @@
       <div class="w-1/2">
         <h2 class="text-text font-bold text-4xl mb-6">
           Forma parte de nuestros
-          <i class="text-primary">equipos deportivos</i>
+          <i class="text-primary">equipos deportivos!</i>
         </h2>
         <p class="text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, sequi
-          nam aspernatur quaerat quia, sit, modi quo amet pariatur ut aut vero.
-          Eos repudiandae tenetur harum quam. Dolorum, quidem. Deserunt.
+          ¡Descubre la disciplina, el trabajo en equipo y la satisfacción de
+          alcanzar metas juntos! Ya seas un atleta experimentado o tengas ganas
+          de probar algo nuevo, te invitamos a conocer nuestros diversos
+          equipos. ¡Infórmate, inscríbete y vive la intensidad del deporte
+          universitario! ¡Tu momento de brillar es ahora!
         </p>
       </div>
       <div class="w-1/2">
@@ -28,59 +30,84 @@
   <div class="grid grid-cols-3 space-x-5 space-y-4">
     <app-sport-card
       [title]="'Americano'"
-      [text]="'hellllllllooooooo'"
-      [email]="'deportes@uanl.edu.mx'"
+      [email]="'deportes.fime@uanl.mx'"
+      [place]="'Gaspar Mass'"
+      [phone]="'LV 3pm - 9pm'"
+      [responsible]="'Alberto Contreras'"
     ></app-sport-card>
     <app-sport-card
       [title]="'Futbol'"
-      [text]="'hellllllllooooooo'"
-      [email]="'deportes@uanl.edu.mx'"
+      [email]="'deportes.fime@uanl.mx'"
+      [place]="'Campo FIME'"
+      [phone]="'LMV 3pm - 8pm'"
+      [responsible]="'Alberto Contreras'"
     ></app-sport-card>
     <app-sport-card
       [title]="'Natación'"
-      [text]="'hellllllllooooooo'"
-      [email]="'deportes@uanl.edu.mx'"
+      [email]="'deportes.fime@uanl.mx'"
+      [place]="'Centro Acuático Olímpico Universitario'"
+      [phone]="'LV 12:30pm - 1:30pm'"
+      [responsible]="'Darianna Morán'"
     ></app-sport-card>
     <app-sport-card
-      [title]="'Animación'"
-      [text]="'hellllllllooooooo'"
-      [email]="'deportes@uanl.edu.mx'"
-    ></app-sport-card>
-    <app-sport-card
-      [title]="'Basquetball'"
-      [text]="'hellllllllooooooo'"
-      [email]="'deportes@uanl.edu.mx'"
-    ></app-sport-card>
-    <app-sport-card
-      [title]="'Taekwondo'"
-      [text]="'hellllllllooooooo'"
-      [email]="'deportes@uanl.edu.mx'"
-    ></app-sport-card>
-    <app-sport-card
-      [title]="'Animación'"
-      [text]="'hellllllllooooooo'"
-      [email]="'deportes@uanl.edu.mx'"
+      [title]="'Voleibol'"
+      [email]="'deportes.fime@uanl.mx'"
+      [place]="'Polideportivo FIME'"
+      [phone]="'LV 6:00pm - 9:00pm'"
+      [responsible]="'José Luis Virgen'"
     ></app-sport-card>
     <app-sport-card
       [title]="'Basquetball'"
-      [text]="'hellllllllooooooo'"
-      [email]="'deportes@uanl.edu.mx'"
+      [email]="'deportes.fime@uanl.mx'"
+      [place]="'Polideportivo FIME'"
+      [phone]="'LV 3pm - 6pm'"
+      [responsible]="'Jonathan Banda'"
+    ></app-sport-card>
+    <app-sport-card
+      [title]="'Atletismo'"
+      [email]="'deportes.fime@uanl.mx'"
+      [place]="'Estadio Chico Rivera'"
+      [phone]="'LMV 3:00pm - 5:00pm'"
+      [responsible]="'Laura Gabriela Pulido'"
+    ></app-sport-card>
+    <app-sport-card
+      [title]="'Animación'"
+      [email]="'deportes.fime@uanl.mx'"
+      [place]="'FIME Sintético o Campo Softball'"
+      [phone]="'LMV 6:30pm - 9:30pm'"
+      [responsible]="'Fidel Reyes'"
+    ></app-sport-card>
+    <app-sport-card
+      [title]="'Ciclismo'"
+      [email]="'deportes.fime@uanl.mx'"
+      [place]="'Pista de Niños Heroés'"
+      [phone]="'LMV 5:00pm - 7:00pm'"
+      [responsible]="'José Manuel Rodríguez'"
     ></app-sport-card>
     <app-sport-card
       [title]="'Taekwondo'"
-      [text]="'hellllllllooooooo'"
-      [email]="'deportes@uanl.edu.mx'"
+      [email]="'deportes.fime@uanl.mx'"
+      [place]="'Campo FIME'"
+      [phone]="'LMV 10:20am - 11:45am o MJ 3:00pm - 8:30pm'"
+      [responsible]="'Juan Bautista'"
     ></app-sport-card>
   </div>
-  <div>
+  <div class="mt-10">
     <h2 class="text-text text-xl font-semibold mb-8">
-      ¡Contactate con el siguiente correo para conocer más deportes!
+      ¡Contacta el siguiente correo para conocer más deportes!
     </h2>
-    <p>correo</p>
-    <p>info departamento de deportes</p>
+    <p class="font-semibold text-text">
+      Correo: deportes.fime<span>&#64;</span>uanl.mx
+    </p>
+
+    <a
+      href="https://www.facebook.com/deportesfime"
+      class="text-primary font-semibold hover:underline"
+      >Página de Facebook</a
+    >
   </div>
 
-  <div>
+  <div class="mt-18">
     <div class="max-w-2xl mx-auto">
       <div
         id="default-carousel"
@@ -179,17 +206,6 @@
         </button>
       </div>
 
-      <p class="mt-5 text-center text-gray-700 dark:text-gray-300">
-        This carousel slider component is part of a larger, open-source library
-        of Tailwind CSS components. Learn more by going to the official
-        <a
-          class="text-blue-600 hover:underline"
-          href="https://flowbite.com/docs/getting-started/introduction/"
-          target="_blank"
-        >
-          Flowbite Documentation </a
-        >.
-      </p>
       <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
     </div>
     <div id="default-carousel" class="relative w-full" data-carousel="slide">
@@ -198,7 +214,7 @@
         <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <img
-            src="/assets/sc.jpg"
+            src="/assets/americano.jpg"
             class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="..."
           />
@@ -206,7 +222,7 @@
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <img
-            src="/docs/images/carousel/carousel-2.svg"
+            src="/assets/basquet.jpg"
             class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="..."
           />
@@ -214,7 +230,7 @@
         <!-- Item 3 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <img
-            src="/docs/images/carousel/carousel-3.svg"
+            src="/assets/"
             class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="..."
           />
