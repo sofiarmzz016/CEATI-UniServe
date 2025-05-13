@@ -8,8 +8,8 @@ WORKDIR /app
 COPY . .
 
 # Instala las dependencias necesarias, incluyendo flask_cors
-RUN pip install --no-cache-dir flask flask-migrate flask-jwt-extended flask-cors \
-    opencv-python numpy tensorflow matplotlib scipy gunicorn
+RUN pip install --no-cache-dir flask flask_sqlalchemy flask_migrate flask_cors flask_jwt_extended werkzeug gunicorn psycopg2-binary
+
 
 # Expone el puerto
 EXPOSE 5000
