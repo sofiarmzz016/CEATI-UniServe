@@ -10,32 +10,41 @@
   <div>
     <ul class="flex items-center space-x-12 text-text">
       <li>
-        <a class="hover:text-[#83CD51] font-semibold" href="">Inicio</a>
+        <a class="hover:text-[#83CD51] font-semibold" routerLink="">Inicio</a>
       </li>
       <li>
         <a
           class="hover:text-[#83CD51] font-semibold"
-          href="/servicios-generales"
+          routerLink="/servicios-generales"
           >Administración</a
         >
       </li>
       <li>
-        <a class="hover:text-[#83CD51] font-semibold" href="/equipos-deportivos"
+        <a
+          class="hover:text-[#83CD51] font-semibold"
+          routerLink="/equipos-deportivos"
           >Deportes</a
         >
       </li>
       <li>
-        <a class="hover:text-[#83CD51] font-semibold" href="/grupos-artisticos"
+        <a
+          class="hover:text-[#83CD51] font-semibold"
+          routerLink="/grupos-artisticos"
           >Cultura</a
         >
       </li>
       <li>
-        <a class="hover:text-[#83CD51] font-semibold" href="/citas">Salud</a>
+        <a class="hover:text-[#83CD51] font-semibold" routerLink="/citas"
+          >Salud</a
+        >
       </li>
     </ul>
   </div>
 
-  <div class="flex items-center gap-6 border rounded-md p-1.5">
-    <button>Iniciar Sesión</button>
-  </div>
+  <a
+    class="flex items-center gap-6 border rounded-md p-1.5 hover:bg-gray-100"
+    routerLink="/iniciar-sesion"
+  >
+    Iniciar Sesión
+  </a>
 </nav>
