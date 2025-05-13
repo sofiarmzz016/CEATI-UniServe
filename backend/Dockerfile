@@ -7,8 +7,8 @@ WORKDIR /app
 # Copia los archivos del proyecto
 COPY . .
 
-# Instala las dependencias
-RUN pip install --no-cache-dir -r requirements.txt
+# Instala las dependencias necesarias directamente
+RUN pip install --no-cache-dir flask flask-migrate flask-jwt-extended opencv-python numpy tensorflow matplotlib scipy
 
 # Expone el puerto
 EXPOSE 5000
