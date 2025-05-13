@@ -61,7 +61,6 @@ export class MyAppointmentsComponent {
 
     this.appointmentsService.deleteAppointment(appointmentId).subscribe({
       next: () => {
-        // Elimina la cita del array local después de borrarla
         this.appointments = this.appointments.filter(
           (a) => a.id !== appointmentId
         );

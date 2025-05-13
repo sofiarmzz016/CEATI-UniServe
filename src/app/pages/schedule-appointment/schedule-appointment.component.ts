@@ -8,7 +8,7 @@ import { AppointmentsService } from '../../services/appointments.service';
 import { UsersService } from '../../services/users.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-schedule-appointment',
@@ -19,6 +19,7 @@ import { Router } from '@angular/router';
     MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
+    RouterLink,
   ],
   templateUrl: './schedule-appointment.component.html',
 })
@@ -44,7 +45,6 @@ export class ScheduleAppointmentComponent {
     this.usersService.getProfile().subscribe({
       next: (userProfile) => {
         this.userId = userProfile.id;
-        // ya puedes usar this.userId dentro de otros métodos o el template
       },
     });
   }

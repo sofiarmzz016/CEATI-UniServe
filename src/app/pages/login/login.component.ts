@@ -45,7 +45,7 @@ export class LoginComponent {
       this.usersService.register(credentials).subscribe({
         next: () => {
           this.isLoginMode = true;
-          this.fullName = ''; // Limpia el campo al cambiar de modo
+          this.fullName = '';
         },
         error: (err: Error & { error: { message: string } }) => {
           this.errorMessage = err.error.message || 'Error al registrarse.';
