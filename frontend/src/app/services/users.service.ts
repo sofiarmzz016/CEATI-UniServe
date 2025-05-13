@@ -6,7 +6,8 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root',
 })
 export class UsersService {
-  private apiUrl = 'http://localhost:5000/api/users';
+  private apiUrl =
+    'http://http://ceati-uniserve-production.up.railway.app/api/users';
 
   constructor(private http: HttpClient) {}
 

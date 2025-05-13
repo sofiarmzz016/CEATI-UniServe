@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AppointmentsService {
-  private apiUrl = 'http://localhost:5000/api/appointments';
+  private apiUrl =
+    'http://ceati-uniserve-production.up.railway.app/api/appointments';
 
   constructor(private http: HttpClient) {}
 
