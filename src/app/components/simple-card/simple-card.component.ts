@@ -8,4 +8,6 @@ import { Component, input } from '@angular/core';
 export class SimpleCardComponent {
   title = input('');
   text = input('');
+  place = input('');
+  number = input('');
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -7,17 +7,21 @@ import { Component } from '@angular/core';
 })
 export class CardComponent {
   activeTab: string = 'about';
+  title01 = input('');
+  text01 = input('');
+  email = input('');
+  phone = input('');
+  webpage = input('');
+  url = input('');
 
   selectTab(tab: string): void {
     this.activeTab = tab;
   }
 
   getButtonClasses(tab: string): string {
-    const baseClasses =
-      'inline-block p-4 hover:bg-gray-100 dark:hover:bg-gray-700';
-    const activeClasses = 'text-blue-600 dark:text-blue-500 dark:bg-gray-800';
-    const inactiveClasses =
-      'text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300';
+    const baseClasses = 'inline-block p-4 hover:bg-gray-100 ';
+    const activeClasses = 'text-primary ';
+    const inactiveClasses = 'text-gray-500 hover:text-gray-600 ';
 
     if (tab === 'about') {
       return `${baseClasses} rounded-ss-lg ${
