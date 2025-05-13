@@ -3,7 +3,7 @@
 >
   <div class="w-full h-full">
     <div class="flex pt-14 space-x-40 h-100">
-      <div class="w-1/2">
+      <div class="w-full md:w-1/2">
         <h2 class="text-text font-bold text-4xl mb-6">
           Conoce nuestros servicios y áreas
           <i class="text-primary">administrativas</i>
@@ -14,11 +14,11 @@
           Eos repudiandae tenetur harum quam. Dolorum, quidem. Deserunt.
         </p>
       </div>
-      <div class="w-1/2">
+      <div class="hidden md:w-1/2 md:block">
         <img
           src="/assets/admin02.png"
           alt=""
-          class="h-full w-full object-cover"
+          class="w-80 h-full object-cover mx-auto block"
         />
       </div>
     </div>
@@ -55,7 +55,7 @@
     </app-link-card>
   </div>
 
-  <div class="">
+  <div class="mt-8">
     <h2 class="text-text font-bold text-2xl mb-8">
       Nuestros Servicios y Áreas Administrativas
     </h2>
@@ -71,7 +71,7 @@
       <app-simple-card
         [title]="'Educación Continua'"
         [text]="
-          `La Coordinación General de Educación Continua y CAADI ofrece a sus estudiantes y público en general, 
+          `La Coordinación General de Educación Continua y CAADI ofrece a sus estudiantes y público en general,
           una amplia oferta educativa que se conforma de: cursos, diplomados y programas técnicos.`
         "
         [place]="'Planta baja del Edificio 5, enfrente de material didáctico'"
