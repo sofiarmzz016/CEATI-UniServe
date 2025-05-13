@@ -8,13 +8,11 @@
     </p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
-        <strong class="font-semibold text-sm text-gray-600">Lugar:</strong>
-        <span class="text-gray-800 text-sm">
-          Edificio Central, Planta Baja</span
-        >
+        <strong class="font-semibold text-sm text-gray-600">Lugar: </strong>
+        <span class="text-gray-800 text-sm"> {{ place() }}</span>
       </div>
       <div>
-        <strong class="font-semibold text-sm text-gray-600">Correo:</strong>
+        <strong class="font-semibold text-sm text-gray-600">Correo: </strong>
         <a
           href="mailto:admisiones-correo.edu.mx"
           class="text-primary text-sm hover:underline"
@@ -22,16 +20,16 @@
         >
       </div>
       <div>
-        <strong class="font-semibold text-sm text-gray-600">Teléfono:</strong>
-        <a href="tel:+528183XXXXXX" class="text-gray-800 text-sm"
-          >+52 81 83 XX XX XX</a
-        >
+        <strong class="font-semibold text-sm text-gray-600">Teléfono: </strong>
+        <a href="tel:+528183XXXXXX" class="text-gray-800 text-sm">{{
+          number()
+        }}</a>
       </div>
       <div>
         <strong class="font-semibold text-sm text-gray-600"
-          >Responsable:</strong
-        >
-        <span class="text-gray-800 text-sm">Lic. Ana Pérez</span>
+          >Responsable:
+        </strong>
+        <span class="text-gray-800 text-sm">M.A. Jorge Espinoza Uribe</span>
       </div>
     </div>
   </div>
