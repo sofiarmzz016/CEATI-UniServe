@@ -7,8 +7,9 @@ WORKDIR /app
 # Copia los archivos del proyecto
 COPY . .
 
-# Instala las dependencias necesarias, incluyendo gunicorn
-RUN pip install --no-cache-dir flask flask-migrate flask-jwt-extended opencv-python numpy tensorflow matplotlib scipy gunicorn
+# Instala las dependencias necesarias, incluyendo flask_cors
+RUN pip install --no-cache-dir flask flask-migrate flask-jwt-extended flask-cors \
+    opencv-python numpy tensorflow matplotlib scipy gunicorn
 
 # Expone el puerto
 EXPOSE 5000
