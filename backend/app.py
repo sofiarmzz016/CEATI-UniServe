@@ -15,9 +15,6 @@ migrate = Migrate(app, db)
 CORS(app)
 jwt = JWTManager(app)
 
-# Importar modelos
-from models import User, Appointment
-
 # Registrar blueprints
 from routes.users import users_bp
 from routes.appointments import appointments_bp

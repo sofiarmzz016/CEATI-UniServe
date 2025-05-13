@@ -1,5 +1,6 @@
 import os
 
+# Define la ruta y configuración de la base de datos
 class Config:
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'postgresql://postgres:contrasena@localhost/uniserve')
     SQLALCHEMY_TRACK_MODIFICATIONS = False

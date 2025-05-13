@@ -8,7 +8,6 @@ import { AppointmentsService } from '../../services/appointments.service';
 import { UsersService } from '../../services/users.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { TestHttpService } from '../../services/test.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -64,8 +63,6 @@ export class ScheduleAppointmentComponent {
     if (!this.selectedDate) return;
 
     const formattedDate = this.selectedDate.toISOString().split('T')[0];
-
-    console.log('DATE: ', formattedDate, this.appointmentType);
 
     this.appointmentsService
       .getAvailableAppointments(formattedDate, this.appointmentType)
