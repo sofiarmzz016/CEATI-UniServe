@@ -38,12 +38,17 @@
           >Salud</a
         >
       </li>
+      <li *ngIf="isLoggedIn">
+        <a class="hover:text-[#83CD51] font-semibold" routerLink="/mis-citas"
+          >Mis citas</a
+        >
+      </li>
     </ul>
   </div>
 
   <a
     *ngIf="!isLoggedIn"
-    class="flex items-center gap-6 border rounded-md p-1.5 hover:bg-gray-100"
+    class="flex items-center gap-6 border border-gray-400 rounded-md p-1.5 hover:bg-gray-100"
     routerLink="/iniciar-sesion"
   >
     Iniciar Sesión
@@ -52,7 +57,7 @@
   <button
     *ngIf="isLoggedIn"
     (click)="logout()"
-    class="flex items-center gap-6 border border-red-500 text-red-500 rounded-md p-1.5 hover:bg-red-100 transition"
+    class="flex items-center gap-6 border border-red-500 text-red-500 rounded-md p-1.5 hover:bg-red-100 transition cursor-pointer"
   >
     Cerrar Sesión
   </button>

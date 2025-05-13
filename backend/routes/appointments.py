@@ -70,3 +70,19 @@ def get_user_appointments(user_id):
     } for appt in appointments]
 
     return jsonify(result), 200
+
+@appointments_bp.route('/delete/<int:appointment_id>', methods=['DELETE'])
+@jwt_required()
+def delete_appointment(appointment_id):
+    try:
+        appointment = Appointment.query.get(appointment_id)
+        if not appointment:
+            return jsonify({'error': 'Cita no encontrada'}), 404
+
+        db.session.delete(appointment)
+        db.session.commit()
+        return jsonify({'message': 'Cita eliminada correctamente'}), 200
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'error': str(e)}), 500

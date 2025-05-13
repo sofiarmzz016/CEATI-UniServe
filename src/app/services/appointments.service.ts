@@ -36,4 +36,12 @@ export class AppointmentsService {
 
     return this.http.get(`${this.apiUrl}/user/${userId}`, { headers });
   }
+
+  deleteAppointment(appointmentId: number): Observable<any> {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.delete(`${this.apiUrl}/delete/${appointmentId}`, {
+      headers,
+    });
+  }
 }

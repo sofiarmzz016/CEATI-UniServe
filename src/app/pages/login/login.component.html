@@ -58,14 +58,14 @@
 
     <button
       type="submit"
-      class="mt-4 w-full h-11 rounded-full text-white bg-indigo-500 hover:opacity-90 transition-opacity cursor-pointer"
+      class="mt-4 w-full h-11 rounded-full text-white bg-primary hover:opacity-90 transition-opacity cursor-pointer"
     >
       {{ isLoginMode ? "Iniciar sesión" : "Registrarse" }}
     </button>
 
     <p class="text-gray-500 text-sm mt-3 mb-11">
       {{ isLoginMode ? "¿No tienes una cuenta?" : "¿Ya tienes una cuenta?" }}
-      <a class="text-indigo-500 cursor-pointer" (click)="toggleMode()">
+      <a class="text-primary cursor-pointer" (click)="toggleMode()">
         {{ isLoginMode ? "Regístrate" : "Inicia sesión" }}
       </a>
     </p>
