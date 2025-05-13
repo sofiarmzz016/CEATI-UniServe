@@ -48,14 +48,19 @@
           ></textarea>
         </div>
 
-        <p class="font-semibold text-text mb-3">Seleccione una hora</p>
+        <p class="font-semibold text-text mb-5">
+          Seleccione una hora:
+          <span class="text-white bg-primary px-2 py-1 rounded-sm ml-2">
+            {{ selectedTime ? selectedTime : "No seleccionada" }}
+          </span>
+        </p>
         <div class="text-primary font-medium flex flex-wrap gap-2">
           <app-time-button
             *ngFor="let time of availableTimeSlots"
             [text]="time"
             (click)="selectHour(time)"
-            [class.bg-accent]="selectedTime === time"
-          ></app-time-button>
+          >
+          </app-time-button>
         </div>
       </div>
       <!-- columna derecha -->
