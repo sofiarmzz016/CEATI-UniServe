@@ -42,9 +42,18 @@
   </div>
 
   <a
+    *ngIf="!isLoggedIn"
     class="flex items-center gap-6 border rounded-md p-1.5 hover:bg-gray-100"
     routerLink="/iniciar-sesion"
   >
     Iniciar Sesión
   </a>
+
+  <button
+    *ngIf="isLoggedIn"
+    (click)="logout()"
+    class="flex items-center gap-6 border border-red-500 text-red-500 rounded-md p-1.5 hover:bg-red-100 transition"
+  >
+    Cerrar Sesión
+  </button>
 </nav>
