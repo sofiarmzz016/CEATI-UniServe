@@ -1,59 +1,99 @@
 # UniServe
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+> ✨ Proyecto web full stack con Angular 19 y Flask + PostgreSQL.
 
-## Development server
+## 📝 Descripción del proyecto
 
-To start a local development server, runn:
+**Nombre del proyecto:** UniServe  
+**Descripción corta:** Plataforma para proveer toda la información universitaria a los estudiantes en un solo lugar, además de gestionar citas entre estudiantes.
+**Autores:** Sofía Catalina Ramírez Ríos
+**Fecha:** [13/05/2025]  
+**Tecnologías:** Angular 19, Flask, PostgreSQL
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+/backend (API REST)
+...todo lo demás corresponde a frontend
+```
+
+---
+
+## ▶️ Cómo ejecutar el proyecto
+
+### 🔧 Requisitos previos
+
+- Node.js v18 o superior
+- Python 3.10 o superior
+- PostgreSQL corriendo localmente o en la nube
+- Angular CLI (`npm install -g @angular/cli`)
+
+---
+
+## 🚀 Frontend (Angular)
+
+### 1. Instalar dependencias
+
+```bash
+npm install
+```
+
+### 2. Cómo levantar el servidor
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+o
 
 ```bash
-ng generate component component-name
+npm run serve
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Una vez corriendo, visita: http://localhost:4200 (este es el puerto definido para angular)
+
+## 🌐 Backend (Flask API)
+
+### 1. Para instalar dependencias
 
 ```bash
-ng generate --help
+cd backend
+pip install -r requirements.txt
 ```
 
-## Building
+### 2. Configurar la base de datos
 
-To build the project run:
+En nuestro caso nosotros usamos pgAdmin 4 (PostgreSQL) de manera local como base de datos.
+Sin embargo pueden conectar la base de datos como mejor les parezca siempre y cuando sea con PostgreSQL.
+
+Recomendamos seguir el mismo método que seguimos nosotros de pgAmin4
+
+Para configurar la base de datos ir a `config.py` y cambiar la línea de `SQLALCHEMY_DATABASE_URI` por la de su base de datos.
 
 ```bash
-ng build
+SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'postgresql://postgres:contrasena_de_tu_servidor@localhost/nombre_de_la_bd')
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY', 'clave-secreta-segura')
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### 3. Inicializar la base de datos
 
-## Running unit tests
+En caso de ya haber una carpeta de migraciones (`/migrations`) en backend, eliminarla.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Para inicializar la base de datos, correr migraciones y dejarla lista:
 
 ```bash
-ng test
+flask db init
+flask db migrate
+flask db upgrade
 ```
 
-## Running end-to-end tests
+### 4. Correr el backend
 
-For end-to-end (e2e) testing, run:
+Para correr el backend abrir una terminal y correr:
 
 ```bash
-ng e2e
+flask run
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
