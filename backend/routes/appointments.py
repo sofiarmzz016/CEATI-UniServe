@@ -8,7 +8,7 @@ from datetime import datetime
 appointments_bp = Blueprint('appointments', __name__)
 
 @appointments_bp.route('/occupied', methods=['GET'])
-@cross_origin(origins="http://localhost:4200", supports_credentials=True)
+# @cross_origin(origins="http://localhost:4200", supports_credentials=True)
 @jwt_required()
 def get_occupied_appointments():
     try:
