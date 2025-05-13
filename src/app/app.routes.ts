@@ -8,6 +8,7 @@ import { SocialServiceComponent } from './pages/social-service/social-service.co
 import { SportTeamsComponent } from './pages/sport-teams/sport-teams.component';
 import { ArtisticGroupsComponent } from './pages/artistic-groups/artistic-groups.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   {
@@ -27,7 +28,15 @@ export const routes: Routes = [
   { path: 'equipos-deportivos', component: SportTeamsComponent },
   { path: 'grupos-artisticos', component: ArtisticGroupsComponent },
   { path: 'citas', component: AppointmentsComponent },
-  { path: 'agendar-citas', component: ScheduleAppointmentComponent },
-  { path: 'mis-citas', component: MyAppointmentsComponent },
+  {
+    path: 'agendar-citas',
+    component: ScheduleAppointmentComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'mis-citas',
+    component: MyAppointmentsComponent,
+    canActivate: [AuthGuard],
+  },
   { path: 'iniciar-sesion', component: LoginComponent },
 ];
