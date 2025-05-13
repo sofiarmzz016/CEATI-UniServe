@@ -26,7 +26,7 @@ export class AppointmentsService {
     const token = localStorage.getItem('token'); // Obtener el token JWT del localStorage
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 
-    return this.http.post(`${this.apiUrl}`, datos, { headers });
+    return this.http.post(`${this.apiUrl}/create`, datos, { headers });
   }
 
   // Obtener citas de un usuario específico

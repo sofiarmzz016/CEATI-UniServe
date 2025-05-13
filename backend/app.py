@@ -21,9 +21,11 @@ from models import User, Appointment
 # Registrar blueprints
 from routes.users import users_bp
 from routes.appointments import appointments_bp
+from routes.test import test_bp
 
 app.register_blueprint(users_bp, url_prefix='/api/users')
 app.register_blueprint(appointments_bp, url_prefix='/api/appointments')
+app.register_blueprint(test_bp, url_prefix='/api/test')
 
 if __name__ == '__main__':
     app.run(debug=True)

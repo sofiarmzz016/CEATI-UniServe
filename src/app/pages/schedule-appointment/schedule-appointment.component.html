@@ -29,9 +29,10 @@
               name="appointment"
               id="appointment"
               class="w-full px-2 rounded-md border-1 border-gray-200"
+              [(ngModel)]="appointmentType"
             >
-              <option value="Psicología">Psicología</option>
-              <option value="Nutrición">Nutrición</option>
+              <option value="Psicologia">Psicología</option>
+              <option value="Nutricion">Nutrición</option>
               <option value="Fisioterapia">Fisioterapia</option>
             </select>
           </div>
@@ -39,35 +40,48 @@
 
         <div class="mb-6">
           <p class="font-semibold text-text mb-3">Descripción</p>
-          <input
+          <textarea
+            [(ngModel)]="description"
             type="text"
             name="description"
-            id=""
-            class="w-full h-30 rounded-md border-1 border-gray-200"
-          />
+            class="w-full h-30 rounded-md border-1 border-gray-200 p-2"
+          ></textarea>
         </div>
 
         <p class="font-semibold text-text mb-3">Seleccione una hora</p>
-        <div class="space-x-6 text-primary font-medium">
-          <app-time-button [text]="'7:00am'"></app-time-button>
-          <app-time-button [text]="'7:50am'"></app-time-button>
-          <app-time-button [text]="'8:40am'"></app-time-button>
-          <app-time-button [text]="'9:30am'"></app-time-button>
-          <app-time-button [text]="'10:20am'"></app-time-button>
+        <div class="text-primary font-medium flex flex-wrap gap-2">
+          <app-time-button
+            *ngFor="let time of availableTimeSlots"
+            [text]="time"
+            (click)="selectHour(time)"
+            [class.bg-accent]="selectedTime === time"
+          ></app-time-button>
         </div>
       </div>
       <!-- columna derecha -->
       <div class="p-2">
         <p class="font-semibold text-text">Seleccione una fecha</p>
 
-        <div class="calendar">
-          <!-- aqui va un calendario -->
-        </div>
+        <mat-form-field appearance="fill" class="w-full">
+          <mat-label>Fecha</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            [(ngModel)]="selectedDate"
+            (dateChange)="selectDate()"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
       </div>
     </div>
     <!-- boton -->
     <button
-      class="fixed bottom-30 right-30 bg-accent rounded-4xl px-10 py-2 text-white font-semibold"
+      class="fixed bottom-30 right-30 bg-accent hover:bg-accent/90 rounded-4xl px-10 py-2 text-white font-semibold cursor-pointer"
+      (click)="submitAppointment()"
     >
       Agendar Cita
     </button>
